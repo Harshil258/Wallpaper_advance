@@ -20,6 +20,14 @@ interface pixel_interface {
         @Query("per_page") per_page: Int
     ): Call<main_data_model>
 
+    @Headers("Authorization: 563492ad6f9170000100000158fc14b816de461ca6b31c1d5afa86b2")
+    @GET("search?")
+    fun getsearchphotos(
+        @Query("query") query: String,
+        @Query("page") page: Int,
+        @Query("per_page") per_page: Int
+    ): Call<main_data_model>
+
 }
 
 object getdatas {

@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
+import com.webninjas.wallpaper_advance.MainActivity.international.bottomBar
 import com.webninjas.wallpaper_advance.adapters.Fragmentadapter
 import me.ibrahimsn.lib.OnItemSelectedListener
 import me.ibrahimsn.lib.SmoothBottomBar
@@ -11,10 +12,13 @@ import me.ibrahimsn.lib.SmoothBottomBar
 class MainActivity : AppCompatActivity() {
 
     lateinit var main_viewpager: ViewPager2
-    lateinit var bottomBar: SmoothBottomBar
     private lateinit var fragmentlist: ArrayList<Fragment>
     private lateinit var fragmentadapter: Fragmentadapter
 
+    object international {
+        lateinit var bottomBar: SmoothBottomBar
+
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

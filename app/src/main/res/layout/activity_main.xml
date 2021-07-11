@@ -30,6 +30,7 @@
             android:id="@+id/bottomBar"
             android:layout_width="match_parent"
             android:layout_height="70dp"
+            android:animateLayoutChanges="true"
             android:fitsSystemWindows="true"
             app:backgroundColor="@color/maincolor"
             app:iconTint="@color/white"
@@ -39,6 +40,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:menu="@menu/bottombar_menu"
+            app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
             app:textSize="15sp" />
 
     </androidx.cardview.widget.CardView>
