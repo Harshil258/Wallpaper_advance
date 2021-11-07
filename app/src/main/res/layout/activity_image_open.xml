@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context=".image_open">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.tntkhang.fullscreenimageview.library.TouchImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/ic_icons8_up_arrow_64" />
+
+
+        <ImageView
+            android:id="@+id/mainimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/back"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher_background" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/customloder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#161d27"
+            android:backgroundTint="#161d27"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#161d27">
+
+                <com.tuyenmonkey.mkloader.MKLoader
+                    android:id="@+id/MKLoader"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:mk_color="@color/yelloworwhite"
+                    app:mk_type="Sharingan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Wait for a Moment..."
+                    android:textColor="@color/yelloworwhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/MKLoader" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/blurView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:blurOverlayColor="#32000000">
+
+    </eightbitlab.com.blurview.BlurView>
+
+    <include layout="@layout/bottom_sheet_persistent" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

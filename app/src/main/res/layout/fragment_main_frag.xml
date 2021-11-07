@@ -10,11 +10,12 @@
     <me.ibrahimsn.lib.SmoothBottomBar
         android:id="@+id/frag_bottomBar"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:background="@color/maincolor"
         android:fitsSystemWindows="true"
         app:backgroundColor="@color/maincolor"
         app:iconTint="@color/white"
+        app:iconSize="20dp"
         app:iconTintActive="@color/yelloworwhite"
         app:indicatorColor="@color/maincolor"
         app:indicatorRadius="5dp"

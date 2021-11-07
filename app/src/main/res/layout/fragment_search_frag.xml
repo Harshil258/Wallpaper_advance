@@ -1,14 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/maincolor"
     tools:context=".search_frag">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:background="@color/yelloworwhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:mt_backIconTint="@color/yelloworwhite"
+        app:mt_backIconUseTint="true"
+        app:mt_clearIconTint="@color/yelloworwhite"
+        app:mt_clearIconUseTint="true"
+        app:mt_dividerColor="@color/yelloworwhite"
+        app:mt_highlightedTextColor="@color/yelloworwhite"
+        app:mt_hint="Custom hint"
+        app:mt_hintColor="@color/yelloworwhite"
+        app:mt_leftTextSelectorTint="@color/yelloworwhite"
+        app:mt_maxSuggestionsCount="10"
+        app:mt_menuIconTint="@color/yelloworwhite"
+        app:mt_placeholder="Search You Want!!"
+        app:mt_placeholderColor="@color/yelloworwhite"
+        app:mt_searchBarColor="@color/black"
+        app:mt_searchIconTint="@color/yelloworwhite"
+        app:mt_speechMode="true"
+        app:mt_textColor="@color/yelloworwhite"
+        app:mt_textCursorTint="@color/yelloworwhite" />
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipetorefresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBar">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchBar"
+            app:spanCount="2"
+            tools:listitem="@layout/image_item" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <ImageView
+        android:id="@+id/backtotop"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="100dp"
+        android:background="@color/white"
+        android:elevation="50dp"
+        android:src="@drawable/ic_baseline_arrow_upward_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircleRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/nofound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/nofound1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_no_file"
+            android:textAlignment="center"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NO ITEM FOUND"
+            android:textColor="@color/yelloworwhite"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nofound1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

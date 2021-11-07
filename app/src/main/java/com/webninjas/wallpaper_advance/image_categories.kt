@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -35,6 +36,17 @@ class image_categories : Fragment() {
         adapter = categories_adapter(requireContext(), list)
         recyclerview.adapter = adapter
 
+        recyclerview.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+                if (dy > 0 && MainActivity.international.bottomBar.isShown) {
+                    MainActivity.international.bottomBar.visibility = View.GONE
+
+                } else if (dy < 0) {
+                    MainActivity.international.bottomBar.visibility = View.VISIBLE
+                }
+            }
+        })
 
         list.add(
             categories_model(
@@ -109,6 +121,14 @@ class image_categories : Fragment() {
             )
         )
 
+
+        var nofound: ConstraintLayout = requireView().findViewById(R.id.nofound)
+        if (list.size != 0) {
+            nofound.visibility = View.GONE
+
+        } else {
+            nofound.visibility = View.VISIBLE
+        }
 
 //        https://images.pexels.com/photos/347139/pexels-photo-347139.jpeg?   auto=compress&cs=tinysrgb&h=350
 

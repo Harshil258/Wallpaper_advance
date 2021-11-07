@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="maincolor">#101018</color>
+    <color name="maincolor">#000000</color>
     <color name="sidecolor">#0e0f18</color>
     <color name="yelloworwhite">#feb238</color>
     <color name="browntxt">#262630</color>
@@ -9,4 +9,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="Violet">#9400D3</color>
+    <color name="Indigo">#4B0082</color>
+    <color name="Blue">#0000FF</color>
+    <color name="Green">#00FF00</color>
+    <color name="Yellow">#FFFF00</color>
+    <color name="Orange">#FF7F00</color>
+    <color name="Red">#FF0000</color>
+
 </resources>
