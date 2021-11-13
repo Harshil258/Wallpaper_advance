@@ -1,5 +1,18 @@
 # Wallpaper_advance
-wallpaper app 
+wallpaper advance app 
+
+Features :
+Clean and Simple User Interface
+Unlimited copiright Free Full HD images from pixel and unsplash
+Segregated among different categories
+View your favorite background beforehand
+Set wallpaper instantly
+Download wallpaper as and when you wan
+Share wallpaper with your friends
+Share App with your friends
+
+All wallpapers comes from opensource api which are unspalsh and pixels. all data which you can see comes from both of these sites. 
+
 
 ![1](https://user-images.githubusercontent.com/50706152/141607064-336dca2c-d6f5-4e59-b545-a62552af8c28.jpg)
 ![Screenshot_2021-11-13-10-13-22-77_77cefd11924ae78b474bfbab77cd2d9c](https://user-images.githubusercontent.com/50706152/141607226-6d120b1a-c575-4b82-bb94-cc2af342e497.jpg)
