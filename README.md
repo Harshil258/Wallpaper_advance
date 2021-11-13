@@ -10,6 +10,7 @@ Features :
 - Download wallpaper as and when you wan
 - Share wallpaper with your friends
 - Share App with your friends
+- change filters directly on the photos to give them different tone
 
    All wallpapers comes from opensource api which are unspalsh and pixels. all data which you can see comes from both of these sites. 
 
