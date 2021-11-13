@@ -2,8 +2,8 @@
 wallpaper advance app 
 
 Features :
--Clean and Simple User Interface
--Unlimited copiright Free Full HD images from pixel and unsplash
+- Clean and Simple User Interface
+- Unlimited copiright Free Full HD images from pixel and unsplash
 -Segregated among different categories
 -View your favorite background beforehand
 -Set wallpaper instantly
