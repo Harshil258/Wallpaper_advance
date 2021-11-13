@@ -2,14 +2,14 @@
 wallpaper advance app 
 
 Features :
-Clean and Simple User Interface
-Unlimited copiright Free Full HD images from pixel and unsplash
-Segregated among different categories
-View your favorite background beforehand
-Set wallpaper instantly
-Download wallpaper as and when you wan
-Share wallpaper with your friends
-Share App with your friends
+-Clean and Simple User Interface
+-Unlimited copiright Free Full HD images from pixel and unsplash
+-Segregated among different categories
+-View your favorite background beforehand
+-Set wallpaper instantly
+-Download wallpaper as and when you wan
+-Share wallpaper with your friends
+-Share App with your friends
 
 All wallpapers comes from opensource api which are unspalsh and pixels. all data which you can see comes from both of these sites. 
 
